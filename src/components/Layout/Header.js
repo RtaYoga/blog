@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { push } from 'react-router-redux'
 
 import {
   Collapse,
@@ -39,6 +40,7 @@ class HeaderComponent extends Component {
   }
 
   render() {
+    const { dispatch } = this.props
     const { navOpen, dropdownOpen } = this.state
 
     return (
@@ -51,10 +53,17 @@ class HeaderComponent extends Component {
         <Collapse isOpen={navOpen} navbar>
           <Nav navbar>
             <NavItem>
-              <NavLink onClick={() => { alert('I am clicked!') }}>Upcoming Events</NavLink>
+              <NavLink onClick={() => {
+                // Where do we go to learn about this?
+                dispatch(push('/upcoming-events'))}}>Upcoming Events</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink onClick={() => { alert('I am clicked!') }}>Sign Up!</NavLink>
+              <NavLink onClick={() => {
+                dispatch(push('/photo-gallery'))}}>Photo Gallery</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink onClick={() => {
+                dispatch(push('/account'))}}>Account</NavLink>
             </NavItem>
           </Nav>
         </Collapse>

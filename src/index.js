@@ -6,7 +6,10 @@ import { store, history } from './store'
 
 import {
   Main,
-  Layout
+  Layout,
+  UpcomingEvents,
+  PhotoGallery,
+  Account
 } from './components/index'
 
 
@@ -18,6 +21,9 @@ ReactDOM.render(
       }}>
         <Layout.Header />
         <Route exact path="/" component={Main.Welcome} />
+        <Route exact path="/upcoming-events" component={UpcomingEvents.Main} />
+        <Route exact path="/photo-gallery" component={PhotoGallery.Main} />
+        <Route exact path="/account" component={Account.Main} />
         <Layout.Footer />
       </div>
     </Provider>

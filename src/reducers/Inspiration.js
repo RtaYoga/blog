@@ -11,6 +11,10 @@ const DEFAULT_INSPIRATION_STATE = {
     author: 'Eckhart Tolle',
     sharedBy: 'Kelsey Carlow',
     quote: "To know yourself as the Being underneath the thinker, the stillness underneath the mental noise, the love and joy underneath the pain, is freedom, salvation, enlightenment."
+  }, {
+    author: 'Lao Tzu',
+    sharedBy: 'Kelsey Carlow',
+    quote: "When I let go of what I am, I become what I might be."
   }]
 }
 

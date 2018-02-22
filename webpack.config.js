@@ -8,7 +8,8 @@ const config = {
   },
   devServer: {
     contentBase: path.join(__dirname, "/"),
-    compress: true
+    compress: true,
+    historyApiFallback: true,
   },
   module: {
     rules: [
@@ -29,6 +30,9 @@ const config = {
             options: {}
           }
         ]
+      },{
+        test: /\.css$/,
+        use: [ 'style-loader', 'css-loader' ]
       }
     ]
   }
